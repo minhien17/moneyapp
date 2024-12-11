@@ -1,0 +1,23 @@
+{
+    "hello": "Xin Chào",
+    "texthome":"Trang chủ",
+    "texttransaction":"Giao dịch",
+    "textadd":"Thêm",
+    "textbudget":"Ngân sách",
+    "textaccount":"Tài khoản",
+
+    "textbalance":"Số dư",
+    "textaddexpense":"Thêm chi tiêu",
+    "textdetail":"Chi tiết",
+    "textsave":"Lưu",
+    "textwritenote":"Ghi chú",
+
+    "textfoodanddrink":"Ăn uống",
+    "textdonation":"Quyên góp, quà tặng",
+    "texteducation":"Giáo dục",
+    "textentertainment":"Vui chơi",
+    "textfamily":"Gia đình, người yêu",
+    "texthomeservice":"Vật dụng trong nhà",
+    "texttransportation":"Di chuyển",
+    "textotherexpense":"Chi tiêu khác"
+}

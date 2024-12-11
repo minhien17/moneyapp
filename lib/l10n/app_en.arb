@@ -1,0 +1,23 @@
+{
+    "hello":"Hello",
+    "texthome":"Home",
+    "texttransaction":"Transaction",
+    "textadd":"Add",
+    "textbudget":"Budget",
+    "textaccount":"Account",
+
+    "textbalance":"Balance",
+    "textaddexpense":"Add Expense",
+    "textdetail":"Detail",
+    "textsave":"Save",
+    "textwritenote":"Write note",
+
+    "textfoodanddrink":"Food & Drink",
+    "textdonation":"Donation & Gift",
+    "texteducation":"Education",
+    "textentertainment":"Entertainment",
+    "textfamily":"Family & Love",
+    "texthomeservice":"Home Service",
+    "texttransportation":"Transportation",
+    "textotherexpense":"Other Expense"
+}
