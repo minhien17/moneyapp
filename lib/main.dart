@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:moneyapp/main/page/add_expense/add_expense_page.dart';
-import 'package:moneyapp/main/page/edit_expense/edit_expense_page.dart';
-import 'package:moneyapp/main/page/main_page.dart';
-import 'package:moneyapp/main/page/transaction/transaction_page.dart';
+import 'package:moneyapp/main/services/setting_service.dart';
+import 'package:moneyapp/main/ui/add_expense/add_expense_page.dart';
+import 'package:moneyapp/main/ui/edit_expense/edit_expense_page.dart';
+import 'package:moneyapp/main/ui/main_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:moneyapp/main/utils/shared_preference.dart';
+import 'package:moneyapp/res/app_colors.dart';
 
-void main() {
-  runApp(MyApp());
+import 'main/ui/transaction/transaction_logic.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await initServices();
+  runApp(const MyApp());
+}
+
+Future initServices() async {
+  await Get.putAsync(() => SettingService().init());
+  Get.put(TransactionLogic()); // put vào để dùng
 }
 
 class MyApp extends StatelessWidget {
@@ -19,20 +31,27 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // primarySwatch: Colors.blue,
-        appBarTheme: AppBarTheme(
-          backgroundColor:
-              Color.fromARGB(255, 40, 232, 158), // Màu nền của AppBar
+        // primaryColor: AppColors.green,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white, // Màu nền của AppBar
           titleTextStyle: TextStyle(
               color: Color.fromARGB(255, 93, 85, 85),
               fontSize: 20), // Màu và kích thước chữ tiêu đề AppBar
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            primary: Color.fromARGB(255, 229, 237, 229),
-            onPrimary: Colors.white,
+            primary: AppColors.background,
+            onPrimary: AppColors.grayText,
             shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
           ),
+        ),
+
+        colorScheme: const ColorScheme.light(
+          primary: AppColors.green,
+          // onSurface: AppColors.green,
+          // onPrimary: Colors.white, // Màu của văn bản trên tiêu đề
+          // background: AppColors.green,
         ),
       ),
       initialRoute: '/',
@@ -44,7 +63,7 @@ class MyApp extends StatelessWidget {
       ],
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: Locale('en'),
+      locale: Get.find<SettingService>().locale,
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:moneyapp/main/services/setting_service.dart';
 
 class Account extends StatefulWidget {
   const Account({super.key});
@@ -20,6 +21,7 @@ class _AccountState extends State<Account> {
               PopupMenuItem<String>(
                 onTap: () {
                   Get.updateLocale(Locale('en'));
+                  Get.find<SettingService>().saveLocale('en');
                 },
                 value: 'en',
                 child: Text('English'),
@@ -28,6 +30,7 @@ class _AccountState extends State<Account> {
                 child: Text("Việt Nam"),
                 onTap: () {
                   Get.updateLocale(Locale('vi'));
+                  Get.find<SettingService>().saveLocale('vi');
                 },
                 value: 'vi',
               )

@@ -40,6 +40,7 @@ dependencies:
   get: any
   sqflite: ^2.2.2
   path: any
+  shared_preferences: 2.2.2
 
 dev_dependencies:
   flutter_test:
@@ -63,15 +64,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - images/img.png
-    - images/food.png
-    - images/donation.png
-    - images/education.png
-    - images/entertain.png
-    - images/family.png
-    - images/other.png
-    - images/transportation.png
-    - images/home.png
+    - assets/icons/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

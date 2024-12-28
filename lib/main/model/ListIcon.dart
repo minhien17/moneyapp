@@ -5,7 +5,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 List<ItemIcon> ListIcon = [
   ItemIcon(
       img: Image.asset(
-        'images/food.png',
+        'assets/icons/food.png',
         height: 30,
         width: 30,
       ),
@@ -13,7 +13,7 @@ List<ItemIcon> ListIcon = [
       description: "Food & Drink"),
   ItemIcon(
       img: Image.asset(
-        'images/donation.png',
+        'assets/icons/donation.png',
         height: 30,
         width: 30,
       ),
@@ -21,7 +21,7 @@ List<ItemIcon> ListIcon = [
       description: "Donation & Gift"),
   ItemIcon(
       img: Image.asset(
-        'images/education.png',
+        'assets/icons/education.png',
         height: 30,
         width: 30,
       ),
@@ -29,7 +29,7 @@ List<ItemIcon> ListIcon = [
       description: "Education"),
   ItemIcon(
       img: Image.asset(
-        'images/entertain.png',
+        'assets/icons/entertain.png',
         height: 30,
         width: 30,
       ),
@@ -37,7 +37,7 @@ List<ItemIcon> ListIcon = [
       description: "Entertainment"),
   ItemIcon(
       img: Image.asset(
-        'images/family.png',
+        'assets/icons/family.png',
         height: 30,
         width: 30,
       ),
@@ -45,7 +45,7 @@ List<ItemIcon> ListIcon = [
       description: "Family & Love"),
   ItemIcon(
       img: Image.asset(
-        'images/home.png',
+        'assets/icons/home.png',
         height: 30,
         width: 30,
       ),
@@ -53,7 +53,7 @@ List<ItemIcon> ListIcon = [
       description: "Home Service"),
   ItemIcon(
       img: Image.asset(
-        'images/transportation.png',
+        'assets/icons/transportation.png',
         height: 30,
         width: 30,
       ),
@@ -61,7 +61,7 @@ List<ItemIcon> ListIcon = [
       description: "Transportation"),
   ItemIcon(
       img: Image.asset(
-        'images/other.png',
+        'assets/icons/other.png',
         height: 30,
         width: 30,
       ),
